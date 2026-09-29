@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Movie</title>
+    <!-- Google Font & Font Awesome for Search Icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Top Hero / Header Section -->
+    <header class="hero-section">
+      <div class="overlay"></div>
+
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <div class="nav-container">
+          <a href="#" class="brand-logo">
+            <img
+              src="https://www.svgrepo.com/show/126115/movie-recorder.svg"
+              alt=""
+              class="logo-icon"
+            />
+            <span class="logo-text">One Movie</span>
+          </a>
+
+          <ul class="nav-links">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link active">Search</a></li>
+            <!-- <li><a href="#" class="contact-btn">CONTACT</a></li> -->
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <h1 class="hero-title">Browse your favorite movies</h1>
+
+        <!-- Pill Search Bar with Icon -->
+        <form
+          class="search-bar"
+          id="searchForm"
+          onsubmit="event.preventDefault()"
+        >
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by Title, Keyword..."
+            autocomplete="off"
+          />
+          <button type="submit" id="searchBtn" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+    </header>
+
+    <!-- Controls & Content Area -->
+    <main class="main-content">
+      <div class="controls-bar">
+        <div class="filter-box">
+          <label for="sortSelect">Sort by:</label>
+          <select id="sortSelect">
+            <option value="default" disabled selected>Select sorting</option>
+            <option value="alpha-asc">Alphabetical: A to Z</option>
+            <option value="alpha-desc">Alphabetical: Z to A</option>
+            <option value="year-desc">Newest to Oldest</option>
+            <option value="year-asc">Oldest to Newest</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Movie Cards Container -->
+      <section id="movieContainer">
+        <!-- Injected via JavaScript -->
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+  <footer class="footer">
+    <div class="footer-container">
+      <a href="#" class="footer-logo">One Movie</a>
+
+      <p class="footer-text">Discover your next favorite movie.</p>
+
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#movieContainer">Movies</a>
+        <a href="#">Search</a>
+      </div>
+<!-- 
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div> -->
+
+      <p class="footer-copy">© 2026 One Movie. All rights reserved.</p>
+    </div>
+  </footer>
+</html>
